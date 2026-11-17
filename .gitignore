@@ -1,0 +1,22 @@
+# Virtual environments
+.venv*/
+venv/
+
+# Python-generated files
+__pycache__/
+*.pyc
+
+# Passwords and local settings
+.env
+.env.*
+!.env.example
+
+# Downloaded media
+*.mp3
+*.mp4
+*.webm
+*.m4a
+*.part
+
+# Editor settings
+.vscode/
