@@ -3,7 +3,13 @@ import csv
 # Import Path to help locate files on your computer
 from pathlib import Path
 # Define a function that receives the location of a CSV file
-from validation import (is_valid_status, is_valid_duration, is_valid_date, is_valid_call_id)
+from validation import (is_valid_status, 
+                        is_valid_duration, 
+                        is_valid_date, 
+                        is_valid_call_id,
+                        validate_columns,
+                        has_complete_row,
+                        )
 from reporting import save_summary
 def summarize_calls(filename):
     #Start our counters at zero
@@ -13,7 +19,8 @@ def summarize_calls(filename):
     duplicate_calls = 0
     # Store call IDs already encountered during this run
     seen_call_ids = set()
-
+    #Collect records that pass every check
+    valid_calls = []
     #Store each date and its missed call count
     # Create an empty dictionary to hold missed-call counts by date
     # Example: {"2026-11-16": 1, "2026-11-17": 2}
@@ -28,10 +35,16 @@ def summarize_calls(filename):
         #read each row as a dictionary using the column names. Each remaining row becomes a dictionary.
         reader = csv.DictReader(file)
 
+        #Check the header before processing any records
+        validate_columns(reader.fieldnames)
+
         for call in reader:
             total_calls += 1
             date = call["date"]
-
+            #Reject rows with missing or extra fields
+            if not has_complete_row(call):
+                invalid_calls += 1
+                continue
             #Remove accidental spaces around the call ID
             call_id = call["call_id"].strip()
 
@@ -74,6 +87,19 @@ def summarize_calls(filename):
             if not is_valid_date(call_date):
                 invalid_calls += 1
                 continue
+            #Build a cleaned record using consistent values and types
+            cleaned_call = {
+                "call_id": call_id,
+                "date": date,
+                "customer": call["customer"].strip(),
+                "phone": call["phone"].strip(),
+                "status": status,
+
+                #validation confirmed that this can be an integer
+                "duration_seconds": int(call["duration_seconds"]),
+            }
+            #Add this dictionary as one item on our list
+            valid_calls.append(cleaned_call)
             # Compare the cleaned value
             if status == "missed":
 
@@ -93,6 +119,8 @@ def summarize_calls(filename):
         "invalid_calls": invalid_calls,
         "missed_by_day": missed_by_day,
         "duplicate_calls": duplicate_calls,
+        "valid_call_count": len(valid_calls),
+        "valid_calls": valid_calls,
     }
 
 if __name__ == "__main__":
@@ -114,6 +142,10 @@ if __name__ == "__main__":
 
         # Exit with code 1 to indicate that the program failed
         raise SystemExit(1)
+    except ValueError as error:
+        #Display teh explanation supplied by validate_columns()
+        print(f"Invalid input file: {error}")
+        raise SystemExit(1)
 
     else:
         # Run this section only if processing finished without an error
@@ -124,6 +156,7 @@ if __name__ == "__main__":
         print("Missed calls:", summary["missed_calls"])
         print("Invalid calls:", summary["invalid_calls"])
         print("Duplicate calls:", summary["duplicate_calls"])
+        print("Valid calls:", summary["valid_call_count"])
 
         print("\nMissed calls by day:")
 

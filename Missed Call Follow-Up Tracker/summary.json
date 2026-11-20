@@ -7,5 +7,56 @@
         "2026-11-17": 2,
         "2026-11-18": 2
     },
-    "duplicate_calls": 1
+    "duplicate_calls": 1,
+    "valid_call_count": 6,
+    "valid_calls": [
+        {
+            "call_id": "C001",
+            "date": "2026-11-16",
+            "customer": "Alex",
+            "phone": "0700000001",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C002",
+            "date": "2026-11-16",
+            "customer": "Sam",
+            "phone": "0700000002",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C003",
+            "date": "2026-11-17",
+            "customer": "Alex",
+            "phone": "0700000001",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C004",
+            "date": "2026-11-17",
+            "customer": "Jordan",
+            "phone": "0700000003",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C005",
+            "date": "2026-11-18",
+            "customer": "Sam",
+            "phone": "0700000002",
+            "status": "answered",
+            "duration_seconds": 90
+        },
+        {
+            "call_id": "C007",
+            "date": "2026-11-18",
+            "customer": "Taylor",
+            "phone": "0700000004",
+            "status": "missed",
+            "duration_seconds": 0
+        }
+    ]
 }
