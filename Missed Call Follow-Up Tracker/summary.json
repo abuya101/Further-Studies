@@ -1,0 +1,11 @@
+{
+    "total_calls": 12,
+    "missed_calls": 4,
+    "invalid_calls": 5,
+    "missed_by_day": {
+        "2026-11-16": 2,
+        "2026-11-17": 2,
+        "2026-11-18": 2
+    },
+    "duplicate_calls": 1
+}
