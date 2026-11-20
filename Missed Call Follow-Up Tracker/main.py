@@ -11,6 +11,7 @@ from validation import (is_valid_status,
                         has_complete_row,
                         )
 from reporting import save_summary
+from database import initialize_database, save_calls
 def summarize_calls(filename):
     #Start our counters at zero
     total_calls = 0
@@ -148,6 +149,22 @@ if __name__ == "__main__":
         raise SystemExit(1)
 
     else:
+        #locate the db inside main.py
+        database_file = project_folder / "calls.db"
+
+        #Create the database and tables if not existent
+        initialize_database(database_file)
+
+        #Save only the records that passed validation
+        inserted_calls = save_calls(database_file, summary["valid_calls"])
+
+        #Count valid records whose IDs are already in the database
+        existing_calls = summary["valid_call_count"] - inserted_calls
+
+        #Include the import results in the JSON report
+        summary["inserted_calls"] = inserted_calls
+        summary["existing_calls"] = existing_calls
+
         # Run this section only if processing finished without an error
         save_summary(summary, report_file)
 
@@ -157,6 +174,8 @@ if __name__ == "__main__":
         print("Invalid calls:", summary["invalid_calls"])
         print("Duplicate calls:", summary["duplicate_calls"])
         print("Valid calls:", summary["valid_call_count"])
+        print("New calls saved:", summary["inserted_calls"])
+        print("Calls already stored:", summary["existing_calls"])
 
         print("\nMissed calls by day:")
 

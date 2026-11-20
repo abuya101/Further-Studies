@@ -58,5 +58,7 @@
             "status": "missed",
             "duration_seconds": 0
         }
-    ]
+    ],
+    "inserted_calls": 0,
+    "existing_calls": 6
 }
