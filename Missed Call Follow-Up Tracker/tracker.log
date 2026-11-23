@@ -111,3 +111,297 @@
 2026-11-23 16:35:23,742 | WARNING | Duplicate call skipped: C022
 2026-11-23 16:35:23,743 | WARNING | Duplicate call skipped: C031
 2026-11-23 16:35:23,752 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-23 16:49:26,627 | INFO | Import started
+2026-11-23 16:49:26,628 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 16:49:26,628 | WARNING | Duplicate call skipped: C001
+2026-11-23 16:49:26,628 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 16:49:26,628 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 16:49:26,628 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 16:49:26,628 | WARNING | CSV line 13: missing call ID
+2026-11-23 16:49:26,628 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 16:49:26,628 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 16:49:26,628 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 16:49:26,628 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 16:49:26,628 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 16:49:26,628 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 16:49:26,628 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 16:49:26,628 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 16:49:26,628 | WARNING | CSV line 63: missing call ID
+2026-11-23 16:49:26,628 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 16:49:26,629 | WARNING | Duplicate call skipped: C011
+2026-11-23 16:49:26,629 | WARNING | Duplicate call skipped: C014
+2026-11-23 16:49:26,629 | WARNING | Duplicate call skipped: C018
+2026-11-23 16:49:26,629 | WARNING | Duplicate call skipped: C022
+2026-11-23 16:49:26,629 | WARNING | Duplicate call skipped: C031
+2026-11-23 16:49:26,631 | ERROR | Import failed while saving the JSON report
+Traceback (most recent call last):
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/main.py", line 239, in <module>
+    save_summary(summary, report_file)
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/reporting.py", line 11, in save_summary
+    with open(filename, "w", encoding="utf-8") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker'
+2026-11-23 16:50:05,104 | INFO | Import started
+2026-11-23 16:50:05,104 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 16:50:05,104 | WARNING | Duplicate call skipped: C001
+2026-11-23 16:50:05,104 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 16:50:05,104 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 16:50:05,104 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 16:50:05,104 | WARNING | CSV line 13: missing call ID
+2026-11-23 16:50:05,104 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 16:50:05,104 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 16:50:05,104 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 16:50:05,104 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 16:50:05,104 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 16:50:05,104 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 16:50:05,104 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 16:50:05,105 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 16:50:05,105 | WARNING | CSV line 63: missing call ID
+2026-11-23 16:50:05,105 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 16:50:05,105 | WARNING | Duplicate call skipped: C011
+2026-11-23 16:50:05,105 | WARNING | Duplicate call skipped: C014
+2026-11-23 16:50:05,105 | WARNING | Duplicate call skipped: C018
+2026-11-23 16:50:05,105 | WARNING | Duplicate call skipped: C022
+2026-11-23 16:50:05,105 | WARNING | Duplicate call skipped: C031
+2026-11-23 16:50:05,107 | ERROR | Import failed while saving the JSON report
+Traceback (most recent call last):
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/main.py", line 239, in <module>
+    save_summary(summary, report_file)
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/reporting.py", line 11, in save_summary
+    with open(filename, "w", encoding="utf-8") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker'
+2026-11-23 16:51:04,798 | INFO | Import started
+2026-11-23 16:51:04,798 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 16:51:04,798 | WARNING | Duplicate call skipped: C001
+2026-11-23 16:51:04,798 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 16:51:04,798 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 16:51:04,798 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 16:51:04,798 | WARNING | CSV line 13: missing call ID
+2026-11-23 16:51:04,798 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 16:51:04,798 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 16:51:04,798 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 16:51:04,798 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 16:51:04,798 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 16:51:04,798 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 16:51:04,798 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 16:51:04,798 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 16:51:04,799 | WARNING | CSV line 63: missing call ID
+2026-11-23 16:51:04,799 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 16:51:04,799 | WARNING | Duplicate call skipped: C011
+2026-11-23 16:51:04,799 | WARNING | Duplicate call skipped: C014
+2026-11-23 16:51:04,799 | WARNING | Duplicate call skipped: C018
+2026-11-23 16:51:04,799 | WARNING | Duplicate call skipped: C022
+2026-11-23 16:51:04,799 | WARNING | Duplicate call skipped: C031
+2026-11-23 16:51:04,801 | ERROR | Import failed while saving the JSON report
+Traceback (most recent call last):
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/main.py", line 239, in <module>
+    save_summary(summary, report_file)
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/reporting.py", line 11, in save_summary
+    with open(filename, "w", encoding="utf-8") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker'
+2026-11-23 16:52:40,837 | INFO | Import started
+2026-11-23 16:52:40,837 | ERROR | Import failed: input file not found: /home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/calls.csv
+2026-11-23 16:53:01,165 | INFO | Import started
+2026-11-23 16:53:01,165 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 16:53:01,166 | WARNING | Duplicate call skipped: C001
+2026-11-23 16:53:01,166 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 16:53:01,166 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 16:53:01,166 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 16:53:01,166 | WARNING | CSV line 13: missing call ID
+2026-11-23 16:53:01,166 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 16:53:01,166 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 16:53:01,166 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 16:53:01,166 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 16:53:01,166 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 16:53:01,166 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 16:53:01,166 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 16:53:01,166 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 16:53:01,166 | WARNING | CSV line 63: missing call ID
+2026-11-23 16:53:01,166 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 16:53:01,166 | WARNING | Duplicate call skipped: C011
+2026-11-23 16:53:01,166 | WARNING | Duplicate call skipped: C014
+2026-11-23 16:53:01,166 | WARNING | Duplicate call skipped: C018
+2026-11-23 16:53:01,167 | WARNING | Duplicate call skipped: C022
+2026-11-23 16:53:01,167 | WARNING | Duplicate call skipped: C031
+2026-11-23 16:53:01,169 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-23 17:33:57,499 | INFO | Import started
+2026-11-23 17:33:57,500 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 17:33:57,500 | WARNING | Duplicate call skipped: C001
+2026-11-23 17:33:57,500 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 17:33:57,500 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 17:33:57,500 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 17:33:57,500 | WARNING | CSV line 13: missing call ID
+2026-11-23 17:33:57,500 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 17:33:57,500 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 17:33:57,500 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 17:33:57,500 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 17:33:57,500 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 17:33:57,500 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 17:33:57,500 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 17:33:57,501 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 17:33:57,501 | WARNING | CSV line 63: missing call ID
+2026-11-23 17:33:57,501 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 17:33:57,501 | WARNING | Duplicate call skipped: C011
+2026-11-23 17:33:57,501 | WARNING | Duplicate call skipped: C014
+2026-11-23 17:33:57,501 | WARNING | Duplicate call skipped: C018
+2026-11-23 17:33:57,501 | WARNING | Duplicate call skipped: C022
+2026-11-23 17:33:57,501 | WARNING | Duplicate call skipped: C031
+2026-11-23 17:33:57,504 | ERROR | Import failed while saving the JSON report
+Traceback (most recent call last):
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/main.py", line 239, in <module>
+    save_summary(summary, report_file)
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/reporting.py", line 35, in save_summary
+    os.replace(temporary_file, report_file)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/.summary-9cida1t6.tmp' -> '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/summary.json'
+2026-11-23 17:35:00,780 | INFO | Import started
+2026-11-23 17:35:00,781 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 17:35:00,781 | WARNING | Duplicate call skipped: C001
+2026-11-23 17:35:00,781 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 17:35:00,781 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 17:35:00,781 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 17:35:00,781 | WARNING | CSV line 13: missing call ID
+2026-11-23 17:35:00,781 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 17:35:00,781 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 17:35:00,781 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 17:35:00,781 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 17:35:00,781 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 17:35:00,781 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 17:35:00,781 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 17:35:00,781 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 17:35:00,781 | WARNING | CSV line 63: missing call ID
+2026-11-23 17:35:00,781 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 17:35:00,781 | WARNING | Duplicate call skipped: C011
+2026-11-23 17:35:00,781 | WARNING | Duplicate call skipped: C014
+2026-11-23 17:35:00,781 | WARNING | Duplicate call skipped: C018
+2026-11-23 17:35:00,781 | WARNING | Duplicate call skipped: C022
+2026-11-23 17:35:00,781 | WARNING | Duplicate call skipped: C031
+2026-11-23 17:35:00,784 | ERROR | Import failed while saving the JSON report
+Traceback (most recent call last):
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/main.py", line 239, in <module>
+    save_summary(summary, report_file)
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/reporting.py", line 35, in save_summary
+    os.replace(temporary_file, report_file)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/.summary-p8cng4fd.tmp' -> '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/summary.json'
+2026-11-23 17:42:25,950 | INFO | Import started
+2026-11-23 17:42:25,950 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 17:42:25,950 | WARNING | Duplicate call skipped: C001
+2026-11-23 17:42:25,951 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 17:42:25,951 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 17:42:25,951 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 17:42:25,951 | WARNING | CSV line 13: missing call ID
+2026-11-23 17:42:25,951 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 17:42:25,951 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 17:42:25,951 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 17:42:25,951 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 17:42:25,951 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 17:42:25,951 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 17:42:25,951 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 17:42:25,951 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 17:42:25,951 | WARNING | CSV line 63: missing call ID
+2026-11-23 17:42:25,951 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 17:42:25,951 | WARNING | Duplicate call skipped: C011
+2026-11-23 17:42:25,951 | WARNING | Duplicate call skipped: C014
+2026-11-23 17:42:25,951 | WARNING | Duplicate call skipped: C018
+2026-11-23 17:42:25,951 | WARNING | Duplicate call skipped: C022
+2026-11-23 17:42:25,951 | WARNING | Duplicate call skipped: C031
+2026-11-23 17:42:25,954 | ERROR | Import failed while saving the JSON report
+Traceback (most recent call last):
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/main.py", line 239, in <module>
+    save_summary(summary, report_file)
+  File "/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/reporting.py", line 35, in save_summary
+    os.replace(temporary_file, report_file)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/.summary-9s0e_djm.tmp' -> '/home/oem/Desktop/Python Project/Further Studies/Missed Call Follow-Up Tracker/summary.json'
+2026-11-23 17:51:47,430 | INFO | Import started
+2026-11-23 17:51:47,431 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 17:51:47,431 | WARNING | Duplicate call skipped: C001
+2026-11-23 17:51:47,431 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 17:51:47,431 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 17:51:47,431 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 17:51:47,431 | WARNING | CSV line 13: missing call ID
+2026-11-23 17:51:47,432 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 17:51:47,432 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 17:51:47,432 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 17:51:47,432 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 17:51:47,432 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 17:51:47,432 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 17:51:47,433 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 17:51:47,433 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 17:51:47,433 | WARNING | CSV line 63: missing call ID
+2026-11-23 17:51:47,433 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 17:51:47,433 | WARNING | Duplicate call skipped: C011
+2026-11-23 17:51:47,434 | WARNING | Duplicate call skipped: C014
+2026-11-23 17:51:47,434 | WARNING | Duplicate call skipped: C018
+2026-11-23 17:51:47,434 | WARNING | Duplicate call skipped: C022
+2026-11-23 17:51:47,434 | WARNING | Duplicate call skipped: C031
+2026-11-23 17:51:47,444 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-23 19:16:27,741 | INFO | Import started
+2026-11-23 19:16:27,741 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 19:16:27,741 | WARNING | Duplicate call skipped: C001
+2026-11-23 19:16:27,741 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 19:16:27,741 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 19:16:27,741 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 19:16:27,741 | WARNING | CSV line 13: missing call ID
+2026-11-23 19:16:27,741 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 19:16:27,741 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 19:16:27,742 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 19:16:27,742 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 19:16:27,742 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 19:16:27,742 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 19:16:27,742 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 19:16:27,742 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 19:16:27,742 | WARNING | CSV line 63: missing call ID
+2026-11-23 19:16:27,742 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 19:16:27,742 | WARNING | Duplicate call skipped: C011
+2026-11-23 19:16:27,742 | WARNING | Duplicate call skipped: C014
+2026-11-23 19:16:27,742 | WARNING | Duplicate call skipped: C018
+2026-11-23 19:16:27,742 | WARNING | Duplicate call skipped: C022
+2026-11-23 19:16:27,742 | WARNING | Duplicate call skipped: C031
+2026-11-23 19:16:27,745 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-23 19:16:45,666 | INFO | Import started
+2026-11-23 19:16:45,666 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 19:16:45,666 | WARNING | Duplicate call skipped: C001
+2026-11-23 19:16:45,667 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 19:16:45,667 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 19:16:45,667 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 19:16:45,667 | WARNING | CSV line 13: missing call ID
+2026-11-23 19:16:45,667 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 19:16:45,667 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 19:16:45,667 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 19:16:45,667 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 19:16:45,667 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 19:16:45,667 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 19:16:45,667 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 19:16:45,667 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 19:16:45,667 | WARNING | CSV line 63: missing call ID
+2026-11-23 19:16:45,667 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 19:16:45,667 | WARNING | Duplicate call skipped: C011
+2026-11-23 19:16:45,667 | WARNING | Duplicate call skipped: C014
+2026-11-23 19:16:45,667 | WARNING | Duplicate call skipped: C018
+2026-11-23 19:16:45,667 | WARNING | Duplicate call skipped: C022
+2026-11-23 19:16:45,667 | WARNING | Duplicate call skipped: C031
+2026-11-23 19:16:45,671 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-23 19:42:25,298 | INFO | Import started
+2026-11-23 19:42:25,298 | WARNING | Invalid status in call C006: 'mised'
+2026-11-23 19:42:25,298 | WARNING | Duplicate call skipped: C001
+2026-11-23 19:42:25,298 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-23 19:42:25,298 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-23 19:42:25,298 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-23 19:42:25,298 | WARNING | CSV line 13: missing call ID
+2026-11-23 19:42:25,299 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-23 19:42:25,299 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-23 19:42:25,299 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-23 19:42:25,299 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-23 19:42:25,299 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-23 19:42:25,299 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-23 19:42:25,299 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-23 19:42:25,299 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-23 19:42:25,299 | WARNING | CSV line 63: missing call ID
+2026-11-23 19:42:25,299 | WARNING | CSV line 64: missing or extra fields
+2026-11-23 19:42:25,299 | WARNING | Duplicate call skipped: C011
+2026-11-23 19:42:25,299 | WARNING | Duplicate call skipped: C014
+2026-11-23 19:42:25,299 | WARNING | Duplicate call skipped: C018
+2026-11-23 19:42:25,299 | WARNING | Duplicate call skipped: C022
+2026-11-23 19:42:25,299 | WARNING | Duplicate call skipped: C031
+2026-11-23 19:42:25,302 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6

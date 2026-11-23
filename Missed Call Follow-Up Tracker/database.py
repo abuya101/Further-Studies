@@ -110,7 +110,7 @@ def get_missed_calls_by_day(filename):
         #Always close the connection
         connection.close()
 
-def get_callback_candidates(filename):
+def get_callback_candidates(filename, threshold=2):
     #Open our existing database
     connection = sqlite3.connect(filename)
 
@@ -133,7 +133,7 @@ def get_callback_candidates(filename):
 
         for phone, missed_count in rows:
             #Two or more missed calls trigger priority follow-up
-            if missed_count >= 2:
+            if missed_count >= threshold:
                 priority = "High"
             else:
                 priority = "Normal"

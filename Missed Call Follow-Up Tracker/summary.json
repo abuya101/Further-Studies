@@ -709,17 +709,17 @@
         {
             "phone": "0700000001",
             "missed_count": 3,
-            "priority": "High"
+            "priority": "Normal"
         },
         {
             "phone": "0700000018",
             "missed_count": 3,
-            "priority": "High"
+            "priority": "Normal"
         },
         {
             "phone": "0700000011",
             "missed_count": 2,
-            "priority": "High"
+            "priority": "Normal"
         },
         {
             "phone": "0700000004",
@@ -731,5 +731,7 @@
             "missed_count": 1,
             "priority": "Normal"
         }
-    ]
+    ],
+    "callback_threshold": 4,
+    "generated_at": "2026-11-23T16:42:25+00:00"
 }

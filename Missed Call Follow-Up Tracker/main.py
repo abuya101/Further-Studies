@@ -10,14 +10,18 @@ from validation import (is_valid_status,
                         validate_columns,
                         has_complete_row,
                         )
-from reporting import save_summary
+from reporting import save_summary, export_callback_candidates
 from database import (initialize_database,
                       save_calls, 
                       count_stored_calls, 
                       get_missed_calls_by_day,
                       get_callback_candidates,
                       )
+
+from config import CALLBACK_THRESHOLD
 import logging #Pythons inbuilt tool for recording events
+
+import sqlite3 #Access SQLites db exception types
 
 def summarize_calls(filename):
     #Start our counters at zero
@@ -179,7 +183,6 @@ if __name__ == "__main__":
     # Build paths for the input data and output report
     data_file = project_folder / "calls.csv"
     report_file = project_folder / "summary.json"
-
     try:
         # Attempt to read and process the input file
         summary = summarize_calls(data_file)
@@ -207,30 +210,53 @@ if __name__ == "__main__":
     else:
         #locate the db inside main.py
         database_file = project_folder / "calls.db"
+        try:
+            #Create the database and tables if not existent
+            initialize_database(database_file)
 
-        #Create the database and tables if not existent
-        initialize_database(database_file)
+            #Save only the records that passed validation
+            inserted_calls = save_calls(database_file, summary["valid_calls"])
 
-        #Save only the records that passed validation
-        inserted_calls = save_calls(database_file, summary["valid_calls"])
+            #Count valid records whose IDs are already in the database
+            existing_calls = summary["valid_call_count"] - inserted_calls
+            # Read the total directly from SQLite
+            summary["stored_calls"] = count_stored_calls(database_file)
 
-        #Count valid records whose IDs are already in the database
-        existing_calls = summary["valid_call_count"] - inserted_calls
-        # Read the total directly from SQLite
-        summary["stored_calls"] = count_stored_calls(database_file)
+            #Include the import results in the JSON report
+            summary["inserted_calls"] = inserted_calls
+            summary["existing_calls"] = existing_calls
 
-        #Include the import results in the JSON report
-        summary["inserted_calls"] = inserted_calls
-        summary["existing_calls"] = existing_calls
+            #Calculate daily missed call totals from the stored db records
+            summary["database_missed_by_day"] = get_missed_calls_by_day(database_file)
+            # Get follow-up candidates from all stored missed calls
+            summary["callback_candidates"] = get_callback_candidates(database_file,
+                                                                     threshold=CALLBACK_THRESHOLD)
+            summary["callback_threshold"] = CALLBACK_THRESHOLD
+        except sqlite3.Error:
+            #Save the error mesage and traceback in tracker.log
+            logging.exception("Import failed during database operations")
 
-        #Calculate daily missed call totals from the stored db records
-        summary["database_missed_by_day"] = get_missed_calls_by_day(database_file)
-        # Get follow-up candidates from all stored missed calls
-        summary["callback_candidates"] = get_callback_candidates(database_file)
+            print("Database operation failed during database operations")
+            raise SystemExit(1)
+        try:
+            # Run this section only if processing finished without an error
+            save_summary(summary, report_file)
+            #Build the callback csv path beside main.py
+            callback_file = project_folder / "callback_candidates.csv"
 
-        # Run this section only if processing finished without an error
-        save_summary(summary, report_file)
+            #Export the candidates already retrieved from SQLite
+            export_callback_candidates(
+                summary["callback_candidates"],
+                callback_file,
+            )
+        except OSError:
+            #Handle file writing problems, such as permission errors
+            logging.exception("Import failed while saving the JSON report")
 
+            print("Could not import file, check tracker.log for details.")
+            raise SystemExit(1)
+
+        #Record completion only after both stages succeed
         logging.info(
             "Import completed | total=%s valid=%s invalid=%s duplicate=%s",
             summary["total_calls"],
