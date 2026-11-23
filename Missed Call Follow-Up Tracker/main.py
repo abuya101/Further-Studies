@@ -17,6 +17,8 @@ from database import (initialize_database,
                       get_missed_calls_by_day,
                       get_callback_candidates,
                       )
+import logging #Pythons inbuilt tool for recording events
+
 def summarize_calls(filename):
     #Start our counters at zero
     total_calls = 0
@@ -50,6 +52,11 @@ def summarize_calls(filename):
             #Reject rows with missing or extra fields
             if not has_complete_row(call):
                 invalid_calls += 1
+
+                logging.warning(
+                    "CSV line %s: missing or extra fields",
+                    reader.line_num,
+                )
                 continue
             #Remove accidental spaces around the call ID
             call_id = call["call_id"].strip()
@@ -57,12 +64,19 @@ def summarize_calls(filename):
             #Reject a call with no ID 
             if not is_valid_call_id(call_id):
                 invalid_calls += 1
+
+                logging.warning(
+                    "CSV line %s: missing call ID",
+                    reader.line_num,
+                )
                 continue
 
             #Skip this record if its ID has already appeared
             if call_id in seen_call_ids:
                 duplicate_calls += 1
-                print(f"Duplicate call skipped: {call_id}")
+
+                #Record the detail in tracker.log instead of printing it in terminal
+                logging.warning("Duplicate call skipped: %s", call_id)
                 continue
 
             #Remember this ID before processing the rest of the record
@@ -76,15 +90,24 @@ def summarize_calls(filename):
                 invalid_calls += 1
 
                 #show which record needs correcting
-                print(
-                    f"Invalid status in call {call['call_id']}: "
-                    f"{call['status']!r}"
+                # %r displays quotes, making blank values and spaces visible
+                logging.warning(
+                    "Invalid status in call %s: %r",
+                    call_id,
+                    call["status"],
                 )
                 #skip the rest of the iteration and read the next record
                 continue
             # Converting the call duration from text into a whole number
             if not is_valid_duration(call["duration_seconds"]):
                 invalid_calls += 1
+
+                logging.warning(
+                    "CSV line %s: invalid duration in call %s: %r",
+                    reader.line_num,
+                    call_id,
+                    call["duration_seconds"],
+                )
                 continue
             # Remove spaces surrounding the date
             call_date = call["date"].strip()
@@ -92,6 +115,13 @@ def summarize_calls(filename):
             # Reject records with an invalid date
             if not is_valid_date(call_date):
                 invalid_calls += 1
+
+                logging.warning(
+                    "CSV line %s: invalid date in call %s: %r",
+                    reader.line_num,
+                    call_id,
+                    call["date"],
+                )
                 continue
             #Build a cleaned record using consistent values and types
             cleaned_call = {
@@ -133,6 +163,19 @@ if __name__ == "__main__":
     # Locate the folder containing this script
     project_folder = Path(__file__).resolve().parent
 
+    #Store the log in our working folder
+    log_file = project_folder / "tracker.log"
+
+    #Append events to the log, including their time and severity
+    logging.basicConfig(
+        filename=log_file,
+        level=logging.INFO,
+        format="%(asctime)s | %(levelname)s | %(message)s",
+        encoding="utf-8"
+    )
+
+    logging.info("Import started")
+
     # Build paths for the input data and output report
     data_file = project_folder / "calls.csv"
     report_file = project_folder / "summary.json"
@@ -141,17 +184,25 @@ if __name__ == "__main__":
         # Attempt to read and process the input file
         summary = summarize_calls(data_file)
 
+
     except FileNotFoundError:
-        # Explain the problem if the input file cannot be found
+        #Record the missing input file in tracker.log
+        logging.error("Import failed: input file not found: %s", data_file)
+
+        #Also explain the problem to the person running the program
         print(f"Input file not found: {data_file}")
         print("Place calls.csv beside main.py and run again.")
 
-        # Exit with code 1 to indicate that the program failed
+        #Tell Linux that the run failed
         raise SystemExit(1)
+
     except ValueError as error:
-        #Display teh explanation supplied by validate_columns()
+        #Record the validation error and its explanation
+        logging.error("Import failed: %s", error)
+
         print(f"Invalid input file: {error}")
         raise SystemExit(1)
+    
 
     else:
         #locate the db inside main.py
@@ -179,6 +230,14 @@ if __name__ == "__main__":
 
         # Run this section only if processing finished without an error
         save_summary(summary, report_file)
+
+        logging.info(
+            "Import completed | total=%s valid=%s invalid=%s duplicate=%s",
+            summary["total_calls"],
+            summary["valid_call_count"],
+            summary["invalid_calls"],
+            summary["duplicate_calls"],
+        )
 
         # Display each final counter once
         print("Total calls:", summary["total_calls"])
