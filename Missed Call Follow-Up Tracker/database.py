@@ -68,3 +68,44 @@ def save_calls(filename, calls):
         connection.close()
 
     return inserted_calls
+
+def count_stored_calls(filename):
+    #open our database
+    connection = sqlite3.connect(filename)
+
+    try:
+        #Ask SQLite to count every row in the calls table
+        cursor = connection.execute("SELECT COUNT(*) FROM calls")
+
+        #Retrieve the result as a tuple, eg (7)
+        result = cursor.fetchone()
+
+        #Return the number inside the tuple
+        return result[0]
+    finally:
+        #Close the connection as always
+        connection.close()
+
+def get_missed_calls_by_day(filename):
+    #Open the database connection
+    connection = sqlite3.connect(filename)
+
+    try:
+        # Filter for missed calls, group them by date,
+        # and count the records in each group
+        cursor = connection.execute("""
+            SELECT date, COUNT(*) AS missed_count FROM calls WHERE status = 'missed' GROUP BY date ORDER BY date
+        """)
+        #Retrieve the results as a list of tuples. 
+        rows = cursor.fetchall()
+
+        #Convert the results into a dictionary
+        missed_by_day = {}
+
+        for call_date, missed_count in rows:
+            missed_by_day[call_date] = missed_count
+
+        return missed_by_day
+    finally:
+        #Always close the connection
+        connection.close()

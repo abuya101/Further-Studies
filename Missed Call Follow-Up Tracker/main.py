@@ -11,7 +11,11 @@ from validation import (is_valid_status,
                         has_complete_row,
                         )
 from reporting import save_summary
-from database import initialize_database, save_calls
+from database import (initialize_database,
+                      save_calls, 
+                      count_stored_calls, 
+                      get_missed_calls_by_day,
+                      )
 def summarize_calls(filename):
     #Start our counters at zero
     total_calls = 0
@@ -107,11 +111,11 @@ def summarize_calls(filename):
                 # Add 1 to the overall missed-call count
                 missed_calls += 1
 
-            #start a counter when we encounter a date for the first time
-            if call_date not in missed_by_day:
-                missed_by_day[call_date] = 0
+                #start a counter when we encounter a date for the first time
+                if call_date not in missed_by_day:
+                    missed_by_day[call_date] = 0
 
-            missed_by_day[call_date] += 1
+                missed_by_day[call_date] += 1
 
     #Return the results together in a dictionary
     return {
@@ -160,10 +164,15 @@ if __name__ == "__main__":
 
         #Count valid records whose IDs are already in the database
         existing_calls = summary["valid_call_count"] - inserted_calls
+        # Read the total directly from SQLite
+        summary["stored_calls"] = count_stored_calls(database_file)
 
         #Include the import results in the JSON report
         summary["inserted_calls"] = inserted_calls
         summary["existing_calls"] = existing_calls
+
+        #Calculate daily missed call totals from the stored db records
+        summary["database_missed_by_day"] = get_missed_calls_by_day(database_file)
 
         # Run this section only if processing finished without an error
         save_summary(summary, report_file)
@@ -176,8 +185,15 @@ if __name__ == "__main__":
         print("Valid calls:", summary["valid_call_count"])
         print("New calls saved:", summary["inserted_calls"])
         print("Calls already stored:", summary["existing_calls"])
+        print("Total calls in database:", summary["stored_calls"])
 
         print("\nMissed calls by day:")
 
         for call_date, count in summary["missed_by_day"].items():
+            print(f"{call_date}: {count}")
+
+        print("\nMissed calls by day — database:")
+
+        # Display the totals returned by our SQL query
+        for call_date, count in summary["database_missed_by_day"].items():
             print(f"{call_date}: {count}")
