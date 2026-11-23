@@ -15,6 +15,7 @@ from database import (initialize_database,
                       save_calls, 
                       count_stored_calls, 
                       get_missed_calls_by_day,
+                      get_callback_candidates,
                       )
 def summarize_calls(filename):
     #Start our counters at zero
@@ -173,6 +174,8 @@ if __name__ == "__main__":
 
         #Calculate daily missed call totals from the stored db records
         summary["database_missed_by_day"] = get_missed_calls_by_day(database_file)
+        # Get follow-up candidates from all stored missed calls
+        summary["callback_candidates"] = get_callback_candidates(database_file)
 
         # Run this section only if processing finished without an error
         save_summary(summary, report_file)
@@ -197,3 +200,19 @@ if __name__ == "__main__":
         # Display the totals returned by our SQL query
         for call_date, count in summary["database_missed_by_day"].items():
             print(f"{call_date}: {count}")
+
+        print("\nCallback candidates - db:")
+
+        #Retrieve the list from our summary dictionary
+        candidates = summary["callback_candidates"]
+
+        if not candidates:
+            print("No callback candidates found")
+        else:
+            #Display one line per phone number
+            for candidate in candidates:
+                phone = candidate["phone"]
+                count = candidate["missed_count"]
+                priority = candidate["priority"]
+
+                print(f"{phone}: {count} missed calls | Priority: {priority}")

@@ -109,3 +109,40 @@ def get_missed_calls_by_day(filename):
     finally:
         #Always close the connection
         connection.close()
+
+def get_callback_candidates(filename):
+    #Open our existing database
+    connection = sqlite3.connect(filename)
+
+    try:
+        #Group missed calls by phone number, showing callers with the most missed calls first
+        cursor = connection.execute("""
+            SELECT phone, COUNT(*) AS missed_count
+            FROM calls
+            WHERE status = 'missed'
+                AND phone != ''
+            GROUP BY phone
+            ORDER BY missed_count DESC, phone ASC
+        """)
+
+        #Collect the query results
+        rows = cursor.fetchall()
+
+        #Build a list of dictionaries for reporting
+        candidates = []
+
+        for phone, missed_count in rows:
+            #Two or more missed calls trigger priority follow-up
+            if missed_count >= 2:
+                priority = "High"
+            else:
+                priority = "Normal"
+
+            candidates.append({
+                "phone": phone,
+                "missed_count": missed_count,
+                "priority": priority,
+            })
+        return candidates
+    finally:
+        connection.close()

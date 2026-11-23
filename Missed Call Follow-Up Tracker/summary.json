@@ -1,14 +1,31 @@
 {
-    "total_calls": 12,
-    "missed_calls": 4,
-    "invalid_calls": 5,
+    "total_calls": 100,
+    "missed_calls": 27,
+    "invalid_calls": 15,
     "missed_by_day": {
-        "2026-11-16": 1,
-        "2026-11-17": 2,
-        "2026-11-18": 1
+        "2026-11-16": 3,
+        "2026-11-17": 3,
+        "2026-11-18": 2,
+        "2026-10-31": 1,
+        "2026-11-12": 2,
+        "2026-11-15": 1,
+        "2026-11-14": 2,
+        "2026-11-19": 1,
+        "2026-11-21": 1,
+        "2026-11-20": 1,
+        "2026-10-26": 1,
+        "2026-11-22": 1,
+        "2026-10-28": 1,
+        "2026-11-09": 1,
+        "2026-10-27": 1,
+        "2026-10-30": 1,
+        "2026-11-11": 1,
+        "2026-10-29": 1,
+        "2026-11-01": 1,
+        "2026-11-13": 1
     },
-    "duplicate_calls": 1,
-    "valid_call_count": 6,
+    "duplicate_calls": 6,
+    "valid_call_count": 79,
     "valid_calls": [
         {
             "call_id": "C001",
@@ -57,14 +74,662 @@
             "phone": "0700000004",
             "status": "missed",
             "duration_seconds": 0
+        },
+        {
+            "call_id": "C011",
+            "date": "2026-10-31",
+            "customer": "Parker",
+            "phone": "0700000018",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C012",
+            "date": "2026-11-03",
+            "customer": "Morgan",
+            "phone": "0700000005",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C013",
+            "date": "2026-11-06",
+            "customer": "Robin",
+            "phone": "0700000012",
+            "status": "answered",
+            "duration_seconds": 900
+        },
+        {
+            "call_id": "C014",
+            "date": "2026-11-09",
+            "customer": "Dakota",
+            "phone": "0700000019",
+            "status": "answered",
+            "duration_seconds": 15
+        },
+        {
+            "call_id": "C015",
+            "date": "2026-11-12",
+            "customer": "Casey",
+            "phone": "0700000006",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C016",
+            "date": "2026-11-15",
+            "customer": "Skyler",
+            "phone": "0700000013",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C017",
+            "date": "2026-11-18",
+            "customer": "Finley",
+            "phone": "0700000020",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C018",
+            "date": "2026-11-21",
+            "customer": "Riley",
+            "phone": "0700000007",
+            "status": "answered",
+            "duration_seconds": 240
+        },
+        {
+            "call_id": "C019",
+            "date": "2026-10-27",
+            "customer": "Reese",
+            "phone": "0700000014",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C022",
+            "date": "2026-11-05",
+            "customer": "Rowan",
+            "phone": "0700000015",
+            "status": "answered",
+            "duration_seconds": 45
+        },
+        {
+            "call_id": "C023",
+            "date": "2026-11-08",
+            "customer": "Sam",
+            "phone": "0700000002",
+            "status": "answered",
+            "duration_seconds": 90
+        },
+        {
+            "call_id": "C024",
+            "date": "2026-11-11",
+            "customer": "Jamie",
+            "phone": "0700000009",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C025",
+            "date": "2026-11-14",
+            "customer": "Blake",
+            "phone": "0700000016",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C026",
+            "date": "2026-11-17",
+            "customer": "Jordan",
+            "phone": "0700000003",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C027",
+            "date": "2026-11-20",
+            "customer": "Drew",
+            "phone": "0700000010",
+            "status": "answered",
+            "duration_seconds": 900
+        },
+        {
+            "call_id": "C028",
+            "date": "2026-10-26",
+            "customer": "Cameron",
+            "phone": "0700000017",
+            "status": "answered",
+            "duration_seconds": 15
+        },
+        {
+            "call_id": "C029",
+            "date": "2026-10-29",
+            "customer": "Taylor",
+            "phone": "0700000004",
+            "status": "answered",
+            "duration_seconds": 45
+        },
+        {
+            "call_id": "C032",
+            "date": "2026-11-07",
+            "customer": "Morgan",
+            "phone": "0700000005",
+            "status": "answered",
+            "duration_seconds": 240
+        },
+        {
+            "call_id": "C033",
+            "date": "2026-11-10",
+            "customer": "Robin",
+            "phone": "0700000012",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C034",
+            "date": "2026-11-13",
+            "customer": "Dakota",
+            "phone": "0700000019",
+            "status": "answered",
+            "duration_seconds": 900
+        },
+        {
+            "call_id": "C035",
+            "date": "2026-11-16",
+            "customer": "Casey",
+            "phone": "0700000006",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C036",
+            "date": "2026-11-19",
+            "customer": "Skyler",
+            "phone": "0700000013",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C037",
+            "date": "2026-11-22",
+            "customer": "Finley",
+            "phone": "0700000020",
+            "status": "answered",
+            "duration_seconds": 90
+        },
+        {
+            "call_id": "C038",
+            "date": "2026-10-28",
+            "customer": "Riley",
+            "phone": "0700000007",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C039",
+            "date": "2026-10-31",
+            "customer": "Reese",
+            "phone": "0700000014",
+            "status": "answered",
+            "duration_seconds": 240
+        },
+        {
+            "call_id": "C042",
+            "date": "2026-11-09",
+            "customer": "Rowan",
+            "phone": "0700000015",
+            "status": "answered",
+            "duration_seconds": 15
+        },
+        {
+            "call_id": "C043",
+            "date": "2026-11-12",
+            "customer": "Sam",
+            "phone": "0700000002",
+            "status": "answered",
+            "duration_seconds": 45
+        },
+        {
+            "call_id": "C044",
+            "date": "2026-11-15",
+            "customer": "Jamie",
+            "phone": "0700000009",
+            "status": "answered",
+            "duration_seconds": 90
+        },
+        {
+            "call_id": "C045",
+            "date": "2026-11-18",
+            "customer": "Blake",
+            "phone": "0700000016",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C046",
+            "date": "2026-11-21",
+            "customer": "Jordan",
+            "phone": "0700000003",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C047",
+            "date": "2026-10-27",
+            "customer": "Drew",
+            "phone": "0700000010",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C048",
+            "date": "2026-10-30",
+            "customer": "Cameron",
+            "phone": "0700000017",
+            "status": "answered",
+            "duration_seconds": 900
+        },
+        {
+            "call_id": "C049",
+            "date": "2026-11-02",
+            "customer": "Taylor",
+            "phone": "0700000004",
+            "status": "answered",
+            "duration_seconds": 15
+        },
+        {
+            "call_id": "C052",
+            "date": "2026-11-11",
+            "customer": "Morgan",
+            "phone": "0700000005",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C053",
+            "date": "2026-11-14",
+            "customer": "Robin",
+            "phone": "0700000012",
+            "status": "answered",
+            "duration_seconds": 240
+        },
+        {
+            "call_id": "C054",
+            "date": "2026-11-17",
+            "customer": "Dakota",
+            "phone": "0700000019",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C055",
+            "date": "2026-11-20",
+            "customer": "Casey",
+            "phone": "0700000006",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C056",
+            "date": "2026-10-26",
+            "customer": "Skyler",
+            "phone": "0700000013",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C057",
+            "date": "2026-10-29",
+            "customer": "Finley",
+            "phone": "0700000020",
+            "status": "answered",
+            "duration_seconds": 45
+        },
+        {
+            "call_id": "C058",
+            "date": "2026-11-01",
+            "customer": "Riley",
+            "phone": "0700000007",
+            "status": "answered",
+            "duration_seconds": 90
+        },
+        {
+            "call_id": "C059",
+            "date": "2026-11-04",
+            "customer": "Reese",
+            "phone": "0700000014",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C062",
+            "date": "2026-11-13",
+            "customer": "Rowan",
+            "phone": "0700000015",
+            "status": "answered",
+            "duration_seconds": 900
+        },
+        {
+            "call_id": "C063",
+            "date": "2026-11-16",
+            "customer": "Sam",
+            "phone": "0700000002",
+            "status": "answered",
+            "duration_seconds": 15
+        },
+        {
+            "call_id": "C064",
+            "date": "2026-11-19",
+            "customer": "Jamie",
+            "phone": "0700000009",
+            "status": "answered",
+            "duration_seconds": 45
+        },
+        {
+            "call_id": "C065",
+            "date": "2026-11-22",
+            "customer": "Blake",
+            "phone": "0700000016",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C066",
+            "date": "2026-10-28",
+            "customer": "Jordan",
+            "phone": "0700000003",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C067",
+            "date": "2026-10-31",
+            "customer": "Drew",
+            "phone": "0700000010",
+            "status": "answered",
+            "duration_seconds": 240
+        },
+        {
+            "call_id": "C068",
+            "date": "2026-11-03",
+            "customer": "Cameron",
+            "phone": "0700000017",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C069",
+            "date": "2026-11-06",
+            "customer": "Taylor",
+            "phone": "0700000004",
+            "status": "answered",
+            "duration_seconds": 900
+        },
+        {
+            "call_id": "C070",
+            "date": "2026-11-09",
+            "customer": "Quinn",
+            "phone": "0700000011",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C071",
+            "date": "2026-11-12",
+            "customer": "Parker",
+            "phone": "0700000018",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C072",
+            "date": "2026-11-15",
+            "customer": "Morgan",
+            "phone": "0700000005",
+            "status": "answered",
+            "duration_seconds": 90
+        },
+        {
+            "call_id": "C073",
+            "date": "2026-11-18",
+            "customer": "Robin",
+            "phone": "0700000012",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C074",
+            "date": "2026-11-21",
+            "customer": "Dakota",
+            "phone": "0700000019",
+            "status": "answered",
+            "duration_seconds": 240
+        },
+        {
+            "call_id": "C075",
+            "date": "2026-10-27",
+            "customer": "Casey",
+            "phone": "0700000006",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C076",
+            "date": "2026-10-30",
+            "customer": "Skyler",
+            "phone": "0700000013",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C077",
+            "date": "2026-11-02",
+            "customer": "Finley",
+            "phone": "0700000020",
+            "status": "answered",
+            "duration_seconds": 15
+        },
+        {
+            "call_id": "C078",
+            "date": "2026-11-05",
+            "customer": "Riley",
+            "phone": "0700000007",
+            "status": "answered",
+            "duration_seconds": 45
+        },
+        {
+            "call_id": "C079",
+            "date": "2026-11-08",
+            "customer": "Reese",
+            "phone": "0700000014",
+            "status": "answered",
+            "duration_seconds": 90
+        },
+        {
+            "call_id": "C080",
+            "date": "2026-11-11",
+            "customer": "Alex",
+            "phone": "0700000001",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C081",
+            "date": "2026-11-14",
+            "customer": "Avery",
+            "phone": "0700000008",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C082",
+            "date": "2026-11-17",
+            "customer": "Rowan",
+            "phone": "0700000015",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C083",
+            "date": "2026-11-20",
+            "customer": "Sam",
+            "phone": "0700000002",
+            "status": "answered",
+            "duration_seconds": 900
+        },
+        {
+            "call_id": "C084",
+            "date": "2026-10-26",
+            "customer": "Jamie",
+            "phone": "0700000009",
+            "status": "answered",
+            "duration_seconds": 15
+        },
+        {
+            "call_id": "C085",
+            "date": "2026-10-29",
+            "customer": "Blake",
+            "phone": "0700000016",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C086",
+            "date": "2026-11-01",
+            "customer": "Jordan",
+            "phone": "0700000003",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C087",
+            "date": "2026-11-04",
+            "customer": "Drew",
+            "phone": "0700000010",
+            "status": "answered",
+            "duration_seconds": 120
+        },
+        {
+            "call_id": "C088",
+            "date": "2026-11-07",
+            "customer": "Cameron",
+            "phone": "0700000017",
+            "status": "answered",
+            "duration_seconds": 240
+        },
+        {
+            "call_id": "C089",
+            "date": "2026-11-10",
+            "customer": "Taylor",
+            "phone": "0700000004",
+            "status": "answered",
+            "duration_seconds": 600
+        },
+        {
+            "call_id": "C090",
+            "date": "2026-11-13",
+            "customer": "Quinn",
+            "phone": "0700000011",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C091",
+            "date": "2026-11-16",
+            "customer": "Parker",
+            "phone": "0700000018",
+            "status": "missed",
+            "duration_seconds": 0
+        },
+        {
+            "call_id": "C092",
+            "date": "2026-11-19",
+            "customer": "Morgan",
+            "phone": "0700000005",
+            "status": "answered",
+            "duration_seconds": 45
+        },
+        {
+            "call_id": "C093",
+            "date": "2026-11-22",
+            "customer": "Robin",
+            "phone": "0700000012",
+            "status": "answered",
+            "duration_seconds": 90
         }
     ],
-    "stored_calls": 6,
-    "inserted_calls": 0,
+    "stored_calls": 79,
+    "inserted_calls": 73,
     "existing_calls": 6,
     "database_missed_by_day": {
-        "2026-11-16": 1,
-        "2026-11-17": 2,
-        "2026-11-18": 1
-    }
+        "2026-10-26": 1,
+        "2026-10-27": 1,
+        "2026-10-28": 1,
+        "2026-10-29": 1,
+        "2026-10-30": 1,
+        "2026-10-31": 1,
+        "2026-11-01": 1,
+        "2026-11-09": 1,
+        "2026-11-11": 1,
+        "2026-11-12": 2,
+        "2026-11-13": 1,
+        "2026-11-14": 2,
+        "2026-11-15": 1,
+        "2026-11-16": 3,
+        "2026-11-17": 3,
+        "2026-11-18": 2,
+        "2026-11-19": 1,
+        "2026-11-20": 1,
+        "2026-11-21": 1,
+        "2026-11-22": 1
+    },
+    "callback_candidates": [
+        {
+            "phone": "0700000003",
+            "missed_count": 5,
+            "priority": "High"
+        },
+        {
+            "phone": "0700000006",
+            "missed_count": 4,
+            "priority": "High"
+        },
+        {
+            "phone": "0700000013",
+            "missed_count": 4,
+            "priority": "High"
+        },
+        {
+            "phone": "0700000016",
+            "missed_count": 4,
+            "priority": "High"
+        },
+        {
+            "phone": "0700000001",
+            "missed_count": 3,
+            "priority": "High"
+        },
+        {
+            "phone": "0700000018",
+            "missed_count": 3,
+            "priority": "High"
+        },
+        {
+            "phone": "0700000011",
+            "missed_count": 2,
+            "priority": "High"
+        },
+        {
+            "phone": "0700000004",
+            "missed_count": 1,
+            "priority": "Normal"
+        },
+        {
+            "phone": "0700000008",
+            "missed_count": 1,
+            "priority": "Normal"
+        }
+    ]
 }
