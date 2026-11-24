@@ -405,3 +405,164 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/oem/Desktop/Pytho
 2026-11-23 19:42:25,299 | WARNING | Duplicate call skipped: C022
 2026-11-23 19:42:25,299 | WARNING | Duplicate call skipped: C031
 2026-11-23 19:42:25,302 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-24 13:13:28,272 | INFO | Import started
+2026-11-24 13:13:28,273 | WARNING | Invalid status in call C006: 'mised'
+2026-11-24 13:13:28,273 | WARNING | Duplicate call skipped: C001
+2026-11-24 13:13:28,273 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-24 13:13:28,273 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-24 13:13:28,273 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-24 13:13:28,273 | WARNING | CSV line 13: missing call ID
+2026-11-24 13:13:28,273 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-24 13:13:28,273 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-24 13:13:28,273 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-24 13:13:28,273 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-24 13:13:28,273 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-24 13:13:28,273 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-24 13:13:28,273 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-24 13:13:28,273 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-24 13:13:28,273 | WARNING | CSV line 63: missing call ID
+2026-11-24 13:13:28,273 | WARNING | CSV line 64: missing or extra fields
+2026-11-24 13:13:28,273 | WARNING | Duplicate call skipped: C011
+2026-11-24 13:13:28,274 | WARNING | Duplicate call skipped: C014
+2026-11-24 13:13:28,274 | WARNING | Duplicate call skipped: C018
+2026-11-24 13:13:28,274 | WARNING | Duplicate call skipped: C022
+2026-11-24 13:13:28,274 | WARNING | Duplicate call skipped: C031
+2026-11-24 13:13:28,277 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-24 13:15:34,067 | INFO | Import started
+2026-11-24 13:15:34,067 | WARNING | Invalid status in call C006: 'mised'
+2026-11-24 13:15:34,067 | WARNING | Duplicate call skipped: C001
+2026-11-24 13:15:34,067 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-24 13:15:34,068 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-24 13:15:34,068 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-24 13:15:34,068 | WARNING | CSV line 13: missing call ID
+2026-11-24 13:15:34,068 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-24 13:15:34,068 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-24 13:15:34,068 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-24 13:15:34,068 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-24 13:15:34,068 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-24 13:15:34,068 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-24 13:15:34,068 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-24 13:15:34,068 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-24 13:15:34,068 | WARNING | CSV line 63: missing call ID
+2026-11-24 13:15:34,068 | WARNING | CSV line 64: missing or extra fields
+2026-11-24 13:15:34,068 | WARNING | Duplicate call skipped: C011
+2026-11-24 13:15:34,068 | WARNING | Duplicate call skipped: C014
+2026-11-24 13:15:34,068 | WARNING | Duplicate call skipped: C018
+2026-11-24 13:15:34,068 | WARNING | Duplicate call skipped: C022
+2026-11-24 13:15:34,068 | WARNING | Duplicate call skipped: C031
+2026-11-24 13:15:34,072 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-24 13:22:43,280 | INFO | Import started
+2026-11-24 13:22:43,280 | WARNING | Invalid status in call C006: 'mised'
+2026-11-24 13:22:43,280 | WARNING | Duplicate call skipped: C001
+2026-11-24 13:22:43,280 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-24 13:22:43,280 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-24 13:22:43,280 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-24 13:22:43,280 | WARNING | CSV line 13: missing call ID
+2026-11-24 13:22:43,281 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-24 13:22:43,281 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-24 13:22:43,281 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-24 13:22:43,281 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-24 13:22:43,281 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-24 13:22:43,281 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-24 13:22:43,281 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-24 13:22:43,281 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-24 13:22:43,281 | WARNING | CSV line 63: missing call ID
+2026-11-24 13:22:43,281 | WARNING | CSV line 64: missing or extra fields
+2026-11-24 13:22:43,281 | WARNING | Duplicate call skipped: C011
+2026-11-24 13:22:43,281 | WARNING | Duplicate call skipped: C014
+2026-11-24 13:22:43,281 | WARNING | Duplicate call skipped: C018
+2026-11-24 13:22:43,281 | WARNING | Duplicate call skipped: C022
+2026-11-24 13:22:43,281 | WARNING | Duplicate call skipped: C031
+2026-11-24 13:22:43,285 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-24 13:24:36,152 | INFO | Import started
+2026-11-24 13:24:36,152 | WARNING | Invalid status in call C006: 'mised'
+2026-11-24 13:24:36,152 | WARNING | Duplicate call skipped: C001
+2026-11-24 13:24:36,152 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-24 13:24:36,152 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-24 13:24:36,153 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-24 13:24:36,153 | WARNING | CSV line 13: missing call ID
+2026-11-24 13:24:36,153 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-24 13:24:36,153 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-24 13:24:36,153 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-24 13:24:36,153 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-24 13:24:36,153 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-24 13:24:36,153 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-24 13:24:36,153 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-24 13:24:36,153 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-24 13:24:36,153 | WARNING | CSV line 63: missing call ID
+2026-11-24 13:24:36,153 | WARNING | CSV line 64: missing or extra fields
+2026-11-24 13:24:36,153 | WARNING | Duplicate call skipped: C011
+2026-11-24 13:24:36,153 | WARNING | Duplicate call skipped: C014
+2026-11-24 13:24:36,153 | WARNING | Duplicate call skipped: C018
+2026-11-24 13:24:36,153 | WARNING | Duplicate call skipped: C022
+2026-11-24 13:24:36,153 | WARNING | Duplicate call skipped: C031
+2026-11-24 13:24:36,157 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-24 13:25:21,792 | INFO | Import started
+2026-11-24 13:25:21,793 | WARNING | Invalid status in call C006: 'mised'
+2026-11-24 13:25:21,793 | WARNING | Duplicate call skipped: C001
+2026-11-24 13:25:21,793 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-24 13:25:21,793 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-24 13:25:21,793 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-24 13:25:21,793 | WARNING | CSV line 13: missing call ID
+2026-11-24 13:25:21,793 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-24 13:25:21,793 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-24 13:25:21,793 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-24 13:25:21,793 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-24 13:25:21,793 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-24 13:25:21,793 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-24 13:25:21,793 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-24 13:25:21,793 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-24 13:25:21,793 | WARNING | CSV line 63: missing call ID
+2026-11-24 13:25:21,793 | WARNING | CSV line 64: missing or extra fields
+2026-11-24 13:25:21,793 | WARNING | Duplicate call skipped: C011
+2026-11-24 13:25:21,793 | WARNING | Duplicate call skipped: C014
+2026-11-24 13:25:21,793 | WARNING | Duplicate call skipped: C018
+2026-11-24 13:25:21,793 | WARNING | Duplicate call skipped: C022
+2026-11-24 13:25:21,793 | WARNING | Duplicate call skipped: C031
+2026-11-24 13:25:21,797 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-24 13:30:46,435 | INFO | Import started
+2026-11-24 13:30:46,435 | WARNING | Invalid status in call C006: 'mised'
+2026-11-24 13:30:46,436 | WARNING | Duplicate call skipped: C001
+2026-11-24 13:30:46,436 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-24 13:30:46,436 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-24 13:30:46,436 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-24 13:30:46,436 | WARNING | CSV line 13: missing call ID
+2026-11-24 13:30:46,437 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-24 13:30:46,437 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-24 13:30:46,437 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-24 13:30:46,437 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-24 13:30:46,438 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-24 13:30:46,438 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-24 13:30:46,438 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-24 13:30:46,438 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-24 13:30:46,438 | WARNING | CSV line 63: missing call ID
+2026-11-24 13:30:46,438 | WARNING | CSV line 64: missing or extra fields
+2026-11-24 13:30:46,439 | WARNING | Duplicate call skipped: C011
+2026-11-24 13:30:46,439 | WARNING | Duplicate call skipped: C014
+2026-11-24 13:30:46,439 | WARNING | Duplicate call skipped: C018
+2026-11-24 13:30:46,439 | WARNING | Duplicate call skipped: C022
+2026-11-24 13:30:46,439 | WARNING | Duplicate call skipped: C031
+2026-11-24 13:30:46,452 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6
+2026-11-24 13:31:31,188 | INFO | Import started
+2026-11-24 13:31:31,189 | WARNING | Invalid status in call C006: 'mised'
+2026-11-24 13:31:31,189 | WARNING | Duplicate call skipped: C001
+2026-11-24 13:31:31,189 | WARNING | CSV line 10: invalid duration in call C008: 'hello'
+2026-11-24 13:31:31,189 | WARNING | CSV line 11: invalid date in call C009: '2026-02-30'
+2026-11-24 13:31:31,189 | WARNING | CSV line 12: invalid date in call C010: '2026-02-30'
+2026-11-24 13:31:31,189 | WARNING | CSV line 13: missing call ID
+2026-11-24 13:31:31,190 | WARNING | Invalid status in call C020: 'unknown'
+2026-11-24 13:31:31,190 | WARNING | Invalid status in call C021: 'unknown'
+2026-11-24 13:31:31,190 | WARNING | CSV line 33: invalid duration in call C030: 'hello'
+2026-11-24 13:31:31,190 | WARNING | CSV line 34: invalid duration in call C031: 'hello'
+2026-11-24 13:31:31,190 | WARNING | CSV line 43: invalid duration in call C040: '-15'
+2026-11-24 13:31:31,191 | WARNING | CSV line 44: invalid duration in call C041: '-15'
+2026-11-24 13:31:31,191 | WARNING | CSV line 53: invalid date in call C050: '2026-11-31'
+2026-11-24 13:31:31,191 | WARNING | CSV line 54: invalid date in call C051: '2026-11-31'
+2026-11-24 13:31:31,191 | WARNING | CSV line 63: missing call ID
+2026-11-24 13:31:31,191 | WARNING | CSV line 64: missing or extra fields
+2026-11-24 13:31:31,192 | WARNING | Duplicate call skipped: C011
+2026-11-24 13:31:31,192 | WARNING | Duplicate call skipped: C014
+2026-11-24 13:31:31,192 | WARNING | Duplicate call skipped: C018
+2026-11-24 13:31:31,192 | WARNING | Duplicate call skipped: C022
+2026-11-24 13:31:31,193 | WARNING | Duplicate call skipped: C031
+2026-11-24 13:31:31,206 | INFO | Import completed | total=100 valid=79 invalid=15 duplicate=6

@@ -1,0 +1,56 @@
+/* Set the page's font, colours and spacing */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Give headings a consistent colour */
+h1, h2 {
+    color: #17324d;
+}
+
+/* Separate each section */
+h2 {
+    margin-top: 32px;
+}
+
+/* Make the table fill the available width */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+/* Add borders and spacing to headings and data cells */
+th, td {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Style the table header */
+th {
+    background: #17324d;
+    color: white;
+}
+
+/* Add a subtle background when hovering over a row */
+tbody tr:hover {
+    background: #eef2f7;
+}
+
+/* Highlight priority labels using separate classes */
+.priority-high {
+    color: #991b1b;
+    background: #fee2e2;
+    font-weight: bold;
+}
+
+.priority-normal {
+    color: #166534;
+    background: #dcfce7;
+}
